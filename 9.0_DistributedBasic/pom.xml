@@ -14,6 +14,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>a-hash-alg</module>
+        <module>b-distributed-id</module>
     </modules>
 
     <properties>

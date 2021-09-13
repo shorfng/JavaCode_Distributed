@@ -1,0 +1,11 @@
+# 创建表
+DROP TABLE IF EXISTS `DISTRIBUTE_ID`;
+CREATE TABLE `DISTRIBUTE_ID`
+(
+    `id`         bigint(32) NOT NULL AUTO_INCREMENT COMMENT '主键',
+    `createtime` datetime DEFAULT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8;
+
+
