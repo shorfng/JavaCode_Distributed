@@ -13,8 +13,8 @@
 
     <packaging>pom</packaging>
     <modules>
-        <module>a-hash-alg</module>
-        <module>b-distributed-id</module>
+        <module>DistributedBasic1-hash-alg</module>
+        <module>DistributedBasic2-distributed-id</module>
     </modules>
 
     <properties>
