@@ -23,7 +23,7 @@ public class ElasticJobMain {
 
         SimpleJobConfiguration simpleJobConfiguration = new SimpleJobConfiguration(
                 jobCoreConfiguration,
-                ArchivieJob.class.getName());
+                ArchiveJob.class.getName());
 
         JobScheduler jobScheduler = new JobScheduler(
                 coordinatorRegistryCenter,

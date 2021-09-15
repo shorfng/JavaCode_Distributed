@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * ElasticJobLite定时任务业务逻辑处理类
  */
-public class ArchivieJob implements SimpleJob {
+public class ArchiveJob implements SimpleJob {
     /**
      * 需求：resume表中未归档的数据归档到resume_bak表中，每次归档1条记录
      * execute方法中写我们的业务逻辑（execute方法每次定时任务执行都会执行一次）
