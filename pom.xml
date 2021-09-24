@@ -10,8 +10,9 @@
 
     <modules>
         <module>9.0_DistributedBasic</module>
-        <module>9.6_Elastic-JOB</module>
         <module>9.1_IO</module>
+        <module>9.2_Netty</module>
+        <module>9.6_Elastic-JOB</module>
     </modules>
 
     <properties>
