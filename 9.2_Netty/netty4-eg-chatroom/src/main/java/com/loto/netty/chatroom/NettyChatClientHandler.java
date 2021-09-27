@@ -1,4 +1,4 @@
-package com.loto.netty.c.chat;
+package com.loto.netty.chatroom;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
