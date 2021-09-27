@@ -1,4 +1,4 @@
-package com.loto.netty.a.quickstart;
+package com.loto.quickstart;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
