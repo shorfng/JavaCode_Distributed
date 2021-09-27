@@ -1,4 +1,4 @@
-package com.loto.netty.d.http;
+package com.loto.netty.http;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;

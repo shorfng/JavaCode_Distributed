@@ -1,4 +1,4 @@
-package com.loto.netty.d.http;
+package com.loto.netty.http;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
