@@ -1,4 +1,4 @@
-package com.loto.netty.b.decoder;
+package com.loto.netty.decoder;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;

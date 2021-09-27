@@ -1,4 +1,4 @@
-package com.loto.netty.b.decoder;
+package com.loto.netty.decoder;
 
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelFutureListener;
