@@ -3,28 +3,27 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>MyCode_Distributed</artifactId>
-        <groupId>com.loto.distributed</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.4.RELEASE</version>
     </parent>
 
-    <modelVersion>4.0.0</modelVersion>
     <groupId>com.loto.netty</groupId>
-    <artifactId>9.2_Netty</artifactId>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>netty7-eg-rpc</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>netty1-decoder</module>
-        <module>netty2-unpacking</module>
-        <module>netty3-quickstart</module>
-        <module>netty4-eg-chatroom</module>
-        <module>netty5-eg-http</module>
-        <module>netty6-eg-chatroom-websocket</module>
-        <module>netty7-eg-rpc</module>
+        <module>rpc-api</module>
+        <module>rpc-consumer</module>
+        <module>rpc-provider</module>
     </modules>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
+
+
 </project>
