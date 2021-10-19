@@ -12,18 +12,18 @@ import java.io.IOException;
 /**
  * Author：蓝田_Loto
  * <p>Date：2021-10-19 19:57</p>
- * <p>PageName：b_CreateNote.java</p>
+ * <p>PageName：b_CreateNode.java</p>
  * <p>Function：创建节点</p>
  */
 
-public class b_CreateNote implements Watcher {
+public class b_CreateNode implements Watcher {
     private static ZooKeeper zooKeeper;
 
     /**
      * 建立会话
      */
     public static void main(String[] args) throws IOException, InterruptedException {
-        zooKeeper = new ZooKeeper("192.168.31.246:2181", 5000, new b_CreateNote());
+        zooKeeper = new ZooKeeper("192.168.31.246:2181", 5000, new b_CreateNode());
         System.out.println(zooKeeper.getState());
 
         Thread.sleep(Integer.MAX_VALUE);
@@ -41,7 +41,7 @@ public class b_CreateNote implements Watcher {
 
             // 创建节点
             try {
-                createNoteSync();
+                createNodeSync();
             } catch (KeeperException | InterruptedException e) {
                 e.printStackTrace();
             }
@@ -51,18 +51,18 @@ public class b_CreateNote implements Watcher {
     /**
      * 创建节点的方法
      */
-    private static void createNoteSync() throws KeeperException, InterruptedException {
+    private static void createNodeSync() throws KeeperException, InterruptedException {
         // 持久节点
-        String note_persistent = zooKeeper.create("/td-persistent", "持久节点内容".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+        String Node_persistent = zooKeeper.create("/td-persistent", "持久节点内容".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
 
         // 临时节点
-        String note_ephemeral = zooKeeper.create("/td-ephemeral", "临时节点内容".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
+        String Node_ephemeral = zooKeeper.create("/td-ephemeral", "临时节点内容".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
 
         // 持久顺序节点
-        String note_persistent_sequential = zooKeeper.create("/td-persistent_sequential", "持久顺序节点内容".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT_SEQUENTIAL);
+        String Node_persistent_sequential = zooKeeper.create("/td-persistent_sequential", "持久顺序节点内容".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT_SEQUENTIAL);
 
-        System.out.println("创建的持久节点" + note_persistent);
-        System.out.println("创建的临时节点" + note_ephemeral);
-        System.out.println("创建的持久顺序节点" + note_persistent_sequential);
+        System.out.println("创建的持久节点" + Node_persistent);
+        System.out.println("创建的临时节点" + Node_ephemeral);
+        System.out.println("创建的持久顺序节点" + Node_persistent_sequential);
     }
 }

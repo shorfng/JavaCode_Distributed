@@ -10,19 +10,19 @@ import java.io.IOException;
 
 /**
  * Author：蓝田_Loto
- * <p>Date：2021-10-19 21:21</p>
- * <p>PageName：d_UpdateNoteData.java</p>
- * <p>Function：修改节点数据</p>
+ * <p>Date：2021-10-19 21:29</p>
+ * <p>PageName：e_DeleteNode.java</p>
+ * <p>Function：删除节点</p>
  */
 
-public class d_UpdateNoteData implements Watcher {
+public class e_DeleteNode implements Watcher {
     private static ZooKeeper zooKeeper;
 
     /**
      * 建立会话
      */
     public static void main(String[] args) throws IOException, InterruptedException {
-        zooKeeper = new ZooKeeper("192.168.31.246:2181", 5000, new d_UpdateNoteData());
+        zooKeeper = new ZooKeeper("192.168.31.246:2181", 5000, new e_DeleteNode());
         System.out.println(zooKeeper.getState());
 
         Thread.sleep(Integer.MAX_VALUE);
@@ -40,7 +40,7 @@ public class d_UpdateNoteData implements Watcher {
         if (watchedEvent.getState() == Event.KeeperState.SyncConnected) {
             // 更新数据节点内容的方法
             try {
-                updateNoteSync();
+                deleteNodeSync();
             } catch (KeeperException | InterruptedException e) {
                 e.printStackTrace();
             }
@@ -48,16 +48,19 @@ public class d_UpdateNoteData implements Watcher {
     }
 
     /**
-     * 更新数据节点内容
+     * 删除节点
      */
-    private void updateNoteSync() throws KeeperException, InterruptedException {
-        byte[] data = zooKeeper.getData("/td-persistent", false, null);
-        System.out.println("修改前的值：" + new String(data));
+    private void deleteNodeSync() throws KeeperException, InterruptedException {
+        // 判断节点是否存在
+        Stat stat = zooKeeper.exists("/td-persistent/aaa", false);
+        System.out.println(stat == null ? "该节点不存在" : "该节点存在");
 
-        // 修改/td-persistent 的数据 stat: 状态信息对象
-        Stat stat = zooKeeper.setData("/td-persistent", "客户端修改了节点数据".getBytes(), -1);
+        // 删除节点
+        if (stat != null) {
+            zooKeeper.delete("/td-persistent/aaa", -1);
+        }
 
-        byte[] data2 = zooKeeper.getData("/td-persistent", false, null);
-        System.out.println("修改后的值：" + new String(data2));
+        Stat stat2 = zooKeeper.exists("/td-persistent/aaa", false);
+        System.out.println(stat2 == null ? "该节点不存在" : "该节点存在");
     }
 }
