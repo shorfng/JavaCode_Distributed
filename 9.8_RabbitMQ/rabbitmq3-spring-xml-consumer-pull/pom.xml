@@ -3,26 +3,24 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>MyCode_Distributed</artifactId>
+        <artifactId>9.8_RabbitMQ</artifactId>
         <groupId>com.loto.distributed</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>9.8_RabbitMQ</artifactId>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>rabbitmq1-demo</module>
-        <module>rabbitmq2-workmode</module>    <!-- RabbitMQ 工作模式 -->
-        <module>rabbitmq3-spring-xml-producer</module>
-        <module>rabbitmq3-spring-xml-consumer-pull</module>  <!-- 拉消息 -->
-        <module>rabbitmq3-spring-xml-consumer-push</module>  <!-- 推消息 -->
-    </modules>
+    <artifactId>rabbitmq3-spring-xml-consumer</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.amqp</groupId>
+            <artifactId>spring-rabbit</artifactId>
+            <version>2.2.7.RELEASE</version>
+        </dependency>
+    </dependencies>
 </project>
