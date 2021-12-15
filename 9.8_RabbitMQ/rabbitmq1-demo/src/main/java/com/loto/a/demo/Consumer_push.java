@@ -1,4 +1,4 @@
-package com.loto;
+package com.loto.a.demo;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
