@@ -9,7 +9,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>rabbitmq2-workqueue</artifactId>
+    <artifactId>rabbitmq2-workmode</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

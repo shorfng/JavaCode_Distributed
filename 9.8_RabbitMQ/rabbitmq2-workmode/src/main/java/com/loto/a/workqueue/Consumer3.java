@@ -1,4 +1,4 @@
-package com.loto;
+package com.loto.a.workqueue;
 
 import com.rabbitmq.client.CancelCallback;
 import com.rabbitmq.client.Channel;

@@ -1,4 +1,4 @@
-package com.loto;
+package com.loto.a.workqueue;
 
 import com.rabbitmq.client.CancelCallback;
 import com.rabbitmq.client.Channel;
@@ -10,7 +10,7 @@ import com.rabbitmq.client.Delivery;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
-public class Consumer1 {
+public class Consumer2 {
     public static void main(String[] args) throws Exception {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setUri("amqp://root:root@192.168.203.133:5672/%2f");
