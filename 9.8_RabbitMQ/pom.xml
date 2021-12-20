@@ -24,6 +24,8 @@
         <module>rabbitmq4-spring-anno-consumer-pull</module> <!-- 拉消息 -->
         <module>rabbitmq4-spring-anno-consumer-push</module> <!-- 推消息 -->
         <module>rabbitmq4-spring-anno-producer</module>
+
+        <module>rabbitmq6-feature</module>
     </modules>
 
     <properties>
