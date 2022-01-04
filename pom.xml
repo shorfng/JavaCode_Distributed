@@ -17,6 +17,7 @@
         <module>9.8_RabbitMQ</module>
         <module>9.9_RocketMQ</module>
         <module>9.10_Kafka</module>
+        <module>9.11_ElasticSearch</module>
     </modules>
 
     <properties>

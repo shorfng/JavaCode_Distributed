@@ -1,0 +1,3 @@
+td:
+  elasticsearch:
+    hostlist: 192.168.203.133:9200
