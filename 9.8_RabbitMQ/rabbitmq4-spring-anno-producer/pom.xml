@@ -9,7 +9,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>rabbitmq４-spring-anno-producer</artifactId>
+    <artifactId>rabbitmq4-spring-anno-producer</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
