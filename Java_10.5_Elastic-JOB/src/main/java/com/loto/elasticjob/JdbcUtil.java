@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 public class JdbcUtil {
-    private static String url = "jdbc:mysql://localhost:3306/JavaWeb_9.6_Elastic-JOB?characterEncoding=utf8&useSSL=false";
+    private static String url = "jdbc:mysql://localhost:3306/JavaWeb_Java_10.5_Elastic-JOB?characterEncoding=utf8&useSSL=false";
     private static String user = "root";
     private static String password = "root";
     private static String driver = "com.mysql.jdbc.Driver";
